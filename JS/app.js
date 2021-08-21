@@ -1,3 +1,4 @@
+//Customization cost display
 function customizationCost(customizeFeature, customizationCostDisplay, customizationCost) {
     document.getElementById(customizeFeature).addEventListener('click', function () {
         document.getElementById(customizationCostDisplay).innerHTML = customizationCost;
@@ -5,6 +6,7 @@ function customizationCost(customizeFeature, customizationCostDisplay, customiza
     });
 }
 
+//calculate total cost for different configuration
 function calculateTotalCost() {
     const bestPrice = parseInt(document.getElementById('best-price').innerHTML);
     const extraMemoryCost = parseInt(document.getElementById('extra-memory-cost').innerHTML);
@@ -24,6 +26,7 @@ customizationCost('1-tb-ssd', 'extra-ssd-cost', 180);
 customizationCost('free-delivery', 'delivery-cost', 0);
 customizationCost('fast-delivery', 'delivery-cost', 20);
 
+//useing promo code
 document.getElementById('pomo-btn').addEventListener('click', function () {
     const pomoCode = document.getElementById('pomo-code').value.toLowerCase();
     if (pomoCode == 'stevekaku') {
